@@ -1,0 +1,10 @@
+{
+  "intents": [
+    {
+      "intent": "StartIntent"
+    },
+    {
+      "intent": "StopIntent"
+    }
+  ]
+}

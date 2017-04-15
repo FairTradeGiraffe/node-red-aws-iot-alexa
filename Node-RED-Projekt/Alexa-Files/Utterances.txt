@@ -1,0 +1,15 @@
+StartIntent schalte die leuchte an
+StartIntent schalte die lampe an
+StartIntent schalte die lampe ein
+StartIntent schalte die leuchte ein
+StartIntent licht einschalten
+StartIntent LED einschalten
+StartIntent L.E.D. einschalten
+StopIntent das licht ausschalten
+StopIntent das licht aus
+StopIntent die lampe ausschalten
+StopIntent schalte die lampe aus
+StopIntent die LED ausmachen
+StopIntent die L.E.D. ausschalten
+StopIntent licht ausmachen
+StopIntent lampe ausmachen
