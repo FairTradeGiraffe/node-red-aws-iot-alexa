@@ -63,6 +63,33 @@ Um Node-RED zu konfigurieren, geht ihr im Browser auf:
 
 http://IP-ADRESSE-DES-RaspberryPi:1880 , also zum Beispiel:  http://192.168.1.41:1880 
 
+Node-RED zusammenbauen:
+
+Wählt aus der Leiste links den Baustein "mqtt" und zieht ihn in die Mitte. Klickt ihn dann doppelt an und geht auf das Stiftsymbol neben Server und fügt dort den HTTPS Link vom Amazon AWS IoT Thing ein (XXXXXXX.iot.eu-west-1.amazonaws.com). 
+
+Stellt den Port auf 8883 um.
+
+Klickt dann die Checkbox "Enable secure SSL/TLS connection" und klickt auf den Stift. Wählt hier den Pfad für die Zertifikate und Schlüssel aus, die ihr auf dem RaspberryPi hochgeladen habt.
+
+```
+Bei Certificate:  /home/pi/Node-RED-Projekt/certs/certificate.pem.crt
+Bei Private Key: /home/pi/Node-RED-Projekt/certs/private.pem.key
+Bei CA Certificate: /home/pi/Node-RED-Projekt/certs/root-CA.crt
+```
+ Dann sagt ihr oben "Done" und dann nochmal "Done" für das andere Menü davor. Dann seid ihr wieder im "Edit mqtt in node" Menü und tragt dort bei Topic "/lampe" ein. Die QoS setzt ihr auf 0. Optional könnt ihr nun auch noch einen Namen vergeben, in diesem Beispiel "Lampe".
+ 
+ Danach wählt ihr unten in der Liste links den "rpi gpio". Diesen zieht ihr in die Mitte und doppelklickt ihn. Dann stellt ihr den GPIO auf Pin40(GPIO21). Type ist Digital Output. Optional die Checkbox "Initialise pin state?" und dort auf low (0).
+ 
+ Praktisch ist nun noch eine Debugnode. Dazu in der Liste bei output, auf debug gehen und in die Mitte ziehen.
+ 
+ Nun einfach die MQTT-Lampe (Lila) mit dem Pin 40 (Blau) und dem Debug(msg.payload - Grün) verbinden.
+ 
+ An den Nodes sind noch 3 blaue Punkte. Dies bedeutet es ist noch nicht gespeichert worden. Deshalb oben rechts einmal auf "Deploy". 
+ 
+ Nun könnt ihr Alexa fragen: "Alexa, sage Himbeere schalte das licht an" und die LED auf dem RaspberryPi Board sollte anfangen zu leuchten. 
+
+
+
 Solltet ihr den Webserver einmal manuell starten müssen gebt im Terminal folgendes ein:
 ```
 node-red
