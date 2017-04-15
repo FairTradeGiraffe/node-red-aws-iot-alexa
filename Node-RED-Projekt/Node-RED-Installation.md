@@ -19,7 +19,7 @@ Danach eine neue Paketquelle hinzufügen, um die neuste NodeJS-Version zu erhalt
 ```
 curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
 
-sudo apt install nodejs
+sudo apt-get install nodejs
 ```
 Nun einmal Node-Red global installieren: 
 ```
