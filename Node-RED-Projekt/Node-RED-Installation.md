@@ -31,7 +31,7 @@ cd /home/pi
 
 mkdir Node-RED-Projekt
 
-cd /Node-RED-Projekt
+cd Node-RED-Projekt/
 ```
 In den Node-RED-Projekt- Ordner einmal den "certs"-Ordner mit root-CA.crt, private.pem.key, public.pem.key, certificate.pem.crt reinkopieren. Am besten mit dem Programm Bitvise SSH Client und dann per SFTP dort hochladen.
 
