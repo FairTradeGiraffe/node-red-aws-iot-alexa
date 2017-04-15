@@ -7,7 +7,7 @@ AWS IoT auf dem Raspberry Pi installieren
 
 Anleitung von Amazon direkt: http://docs.aws.amazon.com/de_de/iot/latest/developerguide/iot-device-sdk-node.html
 
-Sofern es ein ganz frisch aufgesetzter Raspberry Pi ist:
+Sofern es ein ganz frisch aufgesetzter Raspberry Pi ist
 sudo apt-get update
 sudo apt-get upgrade
 
